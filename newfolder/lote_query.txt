@@ -1,0 +1,9 @@
+//para ver solo los certificados que se han recepcionado, pero no se han cortado. Estánen la tabla certificados pero no
+//en la tabla lotes
+
+select top 10 * from certificates c full outer join lotes l on  c.alb_compra=l.alb_compra and c.lote=l.lote
+where c.codigo_pro=980 and l.codigo_pro is null
+
+select --top 10 
+* from certificates c full outer join lotes l on  c.alb_compra=l.alb_compra and c.lote=l.lote
+where c.codigo_pro=980 --and l.codigo_pro is null
